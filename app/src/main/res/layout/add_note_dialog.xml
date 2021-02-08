@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/add_note_back_button"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/ic_arrow"
+            app:backgroundTint="#353535" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/title_edit_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_68sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_48sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_12sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+            app:boxCornerRadiusTopStart="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="العنوان"
+                android:inputType="text"
+                android:maxLength="32"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/subject_edit_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_138sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_110sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_12sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+            app:boxCornerRadiusTopStart="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:hint="الموضوع"
+                android:imeOptions="actionNone"
+                android:inputType="textMultiLine"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/priority_plus"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_296sdp"
+            android:layout_marginEnd="@dimen/_33sdp"
+            android:background="@drawable/edit_round_5"
+            android:src="@drawable/ic_add_2" />
+
+        <ImageButton
+            android:id="@+id/priority_minus"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_296sdp"
+            android:layout_marginEnd="@dimen/_242sdp"
+            android:background="@drawable/edit_round_5"
+            android:src="@drawable/ic_remove" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_296sdp"
+            android:layout_marginEnd="@dimen/_152sdp"
+            android:fontFamily="@font/noto_sans_arabic"
+            android:gravity="end"
+            android:lineSpacingExtra="11sp"
+            android:text="@string/priority"
+            android:textColor="@color/steel"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/priority_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_160sdp"
+            android:layout_marginBottom="@dimen/_145sdp"
+            android:fontFamily="@font/noto_sans_arabic_medium"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="22sp"
+            android:text="1"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="@dimen/_157sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_351sdp"
+            android:layout_marginEnd="@dimen/_86sdp"
+            android:background="@color/steel" />
+
+        <Button
+            android:id="@+id/add_note_BT"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/_124sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:background="@drawable/edit_round_2"
+            android:text="حفظ"
+            android:textColor="@color/weird_green"
+            app:backgroundTint="@color/white" />
+
+        <View
+            android:layout_width="@dimen/_124sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:background="@drawable/edit_round_3" />
+
+        <Button
+            android:id="@+id/cancel_note_BT"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/_124sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:background="@drawable/edit_round_2"
+            android:text="الغاء"
+            android:textColor="@color/coral"
+            app:backgroundTint="@color/white" />
+
+        <View
+            android:layout_width="@dimen/_124sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:background="@drawable/edit_round_4" />
+
+    </RelativeLayout>
+</layout>

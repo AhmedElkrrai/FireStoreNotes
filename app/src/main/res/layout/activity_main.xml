@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.LogInActivity">
+
+        <View
+            android:layout_width="@dimen/_71sdp"
+            android:layout_height="@dimen/_67sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_144sdp"
+            android:background="@drawable/firestore"
+            app:backgroundTint="#4080ff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_118sdp"
+            android:layout_marginEnd="@dimen/_121sdp"
+            android:fontFamily="@font/noto_sans_arabic_semi_bold"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="108sp"
+            android:text="تسجيل الدخول"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_203sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/noto_sans_arabic_medium"
+            android:gravity="end"
+            android:text="الحساب"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/_329sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_228sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_12sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+            app:boxCornerRadiusTopStart="@dimen/_12sdp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:hint="user_name@gmail.com"
+                android:inputType="text"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="15sp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_284sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/noto_sans_arabic_medium"
+            android:gravity="end"
+            android:text="الرقم السري"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/_329sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_309sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_12sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+            app:boxCornerRadiusTopStart="@dimen/_12sdp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:hint="************"
+                android:inputType="textPassword"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="15sp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="@dimen/_329sdp"
+            android:layout_height="@dimen/_52sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_373sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/noto_sans_arabic_medium"
+            android:text="تسجيل الدخول" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_441sdp"
+            android:layout_marginEnd="@dimen/_118sdp"
+            android:fontFamily="@font/noto_sans_arabic_medium"
+            android:gravity="end"
+            android:lineSpacingExtra="13sp"
+            android:text="ليس لدي حساب"
+            android:textColor="@color/on_light_grey"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_441sdp"
+            android:layout_marginEnd="@dimen/_206sdp"
+            android:fontFamily="@font/noto_sans_arabic_medium"
+            android:gravity="end"
+            android:lineSpacingExtra="13sp"
+            android:text="@string/sign_up_under_line"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</layout>

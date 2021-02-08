@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FireStoreDemo</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_up_under_line"><u>اشتراك</u></string>
+    <string name="sign_in_under_line"><u>تسجيل الدخول</u></string>
+    <string name="priority">الأهمية</string>
+</resources>

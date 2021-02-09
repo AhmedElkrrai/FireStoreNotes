@@ -13,24 +13,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NoteViewModel extends ViewModel {
-    private MutableLiveData<List<Note>> noteMutableLiveData = new MutableLiveData<>();
-    private NoteRepository repository;
+    private final MutableLiveData<List<Note>> noteMutableLiveData = new MutableLiveData<>();
+    private final NoteRepository repository;
     private Note note;
+    private final List<Note> notes;
 
     public MutableLiveData<List<Note>> getNoteMutableLiveData() {
         return noteMutableLiveData;
     }
 
     public NoteViewModel() {
-        if (noteMutableLiveData.getValue() == null)
-            noteMutableLiveData.setValue(new ArrayList<>());
         repository = new NoteRepository();
+        if (noteMutableLiveData.getValue() == null)
+            noteMutableLiveData.setValue(repository.getNotes());
+        notes = noteMutableLiveData.getValue();
     }
 
     public void addNote(Note note) {
         repository.addNote(note);
 
-        List<Note> notes = noteMutableLiveData.getValue();
         notes.add(note);
         noteMutableLiveData.setValue(notes);
     }
@@ -38,7 +39,6 @@ public class NoteViewModel extends ViewModel {
     public void updateNote(Note note) {
         repository.updateNote(note);
 
-        List<Note> notes = noteMutableLiveData.getValue();
         notes.set(note.getPosition(), note);
         noteMutableLiveData.setValue(notes);
     }
@@ -46,7 +46,6 @@ public class NoteViewModel extends ViewModel {
     public void deleteNote(Note note) {
         repository.deleteNote(note);
 
-        List<Note> notes = noteMutableLiveData.getValue();
         notes.remove(note.getPosition());
         noteMutableLiveData.setValue(notes);
     }

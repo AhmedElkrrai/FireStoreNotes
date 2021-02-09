@@ -11,15 +11,11 @@ import java.util.List;
 
 public class NoteRepository {
     private final CollectionReference collectionReference;
-    private DocumentSnapshot mLastQueriedDocument;
 
     private static final String NOTES = "notes";
     private static final String TITLE = "title";
     private static final String TEXT = "text";
     private static final String PRIORITY = "priority";
-    private static final String USER_ID = "userId";
-
-    private static final String TAG = "NoteRepository";
 
     public NoteRepository() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();

@@ -10,13 +10,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firestoredemo.R;
 import com.example.firestoredemo.model.Note;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
-    private List<Note> mNotesList = new ArrayList<>();
-    private OnItemClickListener listener;
+
+public class NotesAdapter extends FirestoreRecyclerAdapter<Note, NotesAdapter.NoteViewHolder> {
+
+    public OnItemClickListener listener;
+
+    public NotesAdapter(@NonNull FirestoreRecyclerOptions<Note> options) {
+        super(options);
+    }
 
     @NonNull
     @Override
@@ -25,18 +33,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-        holder.title.setText(mNotesList.get(position).getTitle());
-    }
-
-    @Override
-    public int getItemCount() {
-        return mNotesList.size();
-    }
-
-    public void setList(List<Note> notes) {
-        this.mNotesList = notes;
-        notifyDataSetChanged();
+    protected void onBindViewHolder(@NonNull NoteViewHolder holder, int position, @NonNull Note model) {
+        holder.title.setText(model.getTitle());
     }
 
     public class NoteViewHolder extends RecyclerView.ViewHolder {
@@ -47,19 +45,16 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
             title = itemView.findViewById(R.id.note_item_title_tv);
 
             itemView.setOnClickListener(v -> {
-                if (listener != null) {
-                    int position = getAdapterPosition();
-                    Note note = mNotesList.get(position);
-                    note.setPosition(position);
-                    if (listener != null && position != RecyclerView.NO_POSITION)
-                        listener.onItemClicked(note);
+                int position = getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION && listener != null) {
+                    listener.onItemClick(getSnapshots().getSnapshot(position), position);
                 }
             });
         }
     }
 
     public interface OnItemClickListener {
-        void onItemClicked(Note note);
+        void onItemClick(DocumentSnapshot documentSnapshot, int position);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {

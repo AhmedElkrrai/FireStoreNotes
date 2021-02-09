@@ -50,6 +50,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:18.0.2'
     // FirebaseUI
     implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
 
     //cardview
     implementation "androidx.cardview:cardview:1.0.0"

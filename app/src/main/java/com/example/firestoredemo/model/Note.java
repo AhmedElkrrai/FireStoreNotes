@@ -4,7 +4,7 @@ public class Note {
     private String title;
     private String text;
     private String priority;
-    private int id;
+    private int position;
 
     public Note(String title, String text, String priority) {
         this.title = title;
@@ -12,12 +12,12 @@ public class Note {
         this.priority = priority;
     }
 
-    public int getId() {
-        return id;
+    public int getPosition() {
+        return position;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPosition(int position) {
+        this.position = position;
     }
 
     public String getTitle() {

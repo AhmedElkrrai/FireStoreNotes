@@ -85,8 +85,12 @@ public class Add_Edit_Note_Dialog extends DialogFragment {
                     Toast.makeText(getActivity(), "Please fill all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                
+                note.setTitle(title);
+                note.setText(text);
+                note.setPriority(priority);
 
-                sharedViewModel.updateNote(new Note(title, text, priority));
+                sharedViewModel.updateNote(note);
 
                 Toast.makeText(getActivity(), "Note Updated", Toast.LENGTH_SHORT).show();
                 Objects.requireNonNull(getDialog()).dismiss();

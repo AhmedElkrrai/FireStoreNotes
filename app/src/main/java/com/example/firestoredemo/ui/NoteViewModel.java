@@ -38,13 +38,13 @@ public class NoteViewModel extends ViewModel {
 
     public void updateNote(Note note) {
         List<Note> notes = noteMutableLiveData.getValue();
-        notes.set(note.getId(), note);
+        notes.set(note.getPosition(), note);
         noteMutableLiveData.setValue(notes);
     }
 
     public void deleteNote(Note note) {
         List<Note> notes = noteMutableLiveData.getValue();
-        notes.remove(note.getId());
+        notes.remove(note.getPosition());
         noteMutableLiveData.setValue(notes);
     }
 }

@@ -50,7 +50,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
                 if (listener != null) {
                     int position = getAdapterPosition();
                     Note note = mNotesList.get(position);
-                    note.setId(position);
+                    note.setPosition(position);
                     if (listener != null && position != RecyclerView.NO_POSITION)
                         listener.onItemClicked(note);
                 }

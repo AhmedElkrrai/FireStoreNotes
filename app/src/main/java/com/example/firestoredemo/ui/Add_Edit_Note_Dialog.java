@@ -1,7 +1,6 @@
 package com.example.firestoredemo.ui;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,7 +84,7 @@ public class Add_Edit_Note_Dialog extends DialogFragment {
                     Toast.makeText(getActivity(), "Please fill all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                
+
                 note.setTitle(title);
                 note.setText(text);
                 note.setPriority(priority);

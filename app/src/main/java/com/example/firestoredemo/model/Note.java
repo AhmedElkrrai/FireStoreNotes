@@ -5,11 +5,33 @@ public class Note {
     private String text;
     private String priority;
     private int position;
+    private String noteId;
+    private String userId;
+
+    public Note() {
+
+    }
 
     public Note(String title, String text, String priority) {
         this.title = title;
         this.text = text;
         this.priority = priority;
+    }
+
+    public String getNoteId() {
+        return noteId;
+    }
+
+    public void setNoteId(String noteId) {
+        this.noteId = noteId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public int getPosition() {

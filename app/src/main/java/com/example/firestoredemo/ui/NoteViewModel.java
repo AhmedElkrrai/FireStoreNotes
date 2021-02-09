@@ -25,8 +25,8 @@ public class NoteViewModel extends ViewModel {
     }
 
     public NoteViewModel() {
-        List<Note> list = new ArrayList<>();
-        this.noteMutableLiveData.setValue(list);
+        if (noteMutableLiveData.getValue() == null)
+            noteMutableLiveData.setValue(new ArrayList<>());
     }
 
 

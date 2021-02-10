@@ -26,7 +26,10 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        binding.buttonSignUp.setOnClickListener(view -> registerUser());
+        binding.buttonSignUp.setOnClickListener(view -> {
+            registerUser();
+            binding.buttonSignUp.setClickable(false);
+        });
         binding.textViewLogin.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
         binding.backButton.setOnClickListener(view -> onBackPressed());
     }

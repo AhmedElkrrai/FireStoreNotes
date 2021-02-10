@@ -4,7 +4,6 @@ public class Note {
     private String title;
     private String text;
     private String priority;
-    private int position;
     private String noteId;
     private String userId;
 
@@ -32,14 +31,6 @@ public class Note {
 
     public void setUserId(String userId) {
         this.userId = userId;
-    }
-
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
     }
 
     public String getTitle() {

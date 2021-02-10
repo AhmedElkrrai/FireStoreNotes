@@ -26,7 +26,15 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         binding.textViewSignup.setOnClickListener(view -> startActivity(new Intent(this, SignUpActivity.class)));
-        binding.buttonLogin.setOnClickListener(view -> userLogin());
+        binding.buttonLogin.setOnClickListener(view -> {
+            userLogin();
+            binding.buttonLogin.setClickable(false);
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finishAffinity();
     }
 
     private boolean assertData(String email, String password) {
@@ -63,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         if (assertData(email, password)) {
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
+                    FirebaseAuth.getInstance().updateCurrentUser(task.getResult().getUser());
                     startActivity(new Intent(MainActivity.this, NotesActivity.class));
                 } else {
                     Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();

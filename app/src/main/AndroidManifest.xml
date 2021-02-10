@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/cloudfirestore"
         android:supportsRtl="true"
         android:theme="@style/Theme.FireStoreDemo">
-        <activity android:name=".ui.NotesActivity"
-            android:launchMode="singleTask">
+        <activity android:name=".ui.NotesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

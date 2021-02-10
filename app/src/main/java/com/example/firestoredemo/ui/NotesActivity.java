@@ -37,8 +37,6 @@ public class NotesActivity extends AppCompatActivity {
     private NotesAdapter mAdapter;
     private ActivityNotesBinding binding;
 
-    private static final String TAG = "NotesActivity";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +46,9 @@ public class NotesActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            Log.i(TAG, "onCreate: sasa 404");
             startActivity(new Intent(NotesActivity.this, MainActivity.class));
         } else {
             ID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-            Log.i(TAG, "onCreate: sasa "+ ID);
         }
 
         binding.fab.setOnClickListener(view ->
@@ -129,5 +125,10 @@ public class NotesActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         }
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finishAffinity();
     }
 }
